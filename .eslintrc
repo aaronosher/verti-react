@@ -1,0 +1,54 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:prettier/recommended",
+    "prettier/standard",
+    "prettier/react",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "jsdoc", "header"],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "16"
+    }
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "react/prop-types": 0,
+    "react/jsx-handler-names": 0,
+    "react/jsx-fragments": 0,
+    "react/no-unused-prop-types": 0,
+    "import/export": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "jsdoc/require-param-type": 0,
+    "jsdoc/require-returns-type": 0,
+    "header/header": [
+      2,
+      "block",
+      "\n * Copyright (c) 2020. Aaron Osher.\n * Licensed under an MIT License\n "
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.test.ts", "*.test.tsx"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-angle-bracket-type-assertion": 0
+      }
+    }
+  ]
+}
